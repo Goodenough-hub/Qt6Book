@@ -16,7 +16,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Widget</string>
+   <string>First Demo</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
