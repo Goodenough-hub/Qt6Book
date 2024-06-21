@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>images/120.bmp</file>
+        <file>images/132.bmp</file>
+        <file>images/212.bmp</file>
+        <file>images/322.bmp</file>
+        <file>images/324.bmp</file>
+        <file>images/editor.ico</file>
+    </qresource>
+</RCC>
