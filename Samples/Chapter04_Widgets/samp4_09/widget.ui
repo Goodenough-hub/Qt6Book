@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>544</width>
+    <height>429</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QComboBox的使用</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>301</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>简单Combox</string>
+   </property>
+   <widget class="QPushButton" name="btnIniItems">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>初始化列表</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnCLearList">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>20</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空列表</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chkboxEdit">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>80</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>可编辑</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_simple">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>261</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>20</y>
+     <width>181</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>由用户数据的ComboBox</string>
+   </property>
+   <widget class="QPushButton" name="btnIni2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>初始化城市+区号</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_city">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>161</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>501</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>信息展示</string>
+   </property>
+   <widget class="QPushButton" name="btnClearEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>481</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空文本框</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>481</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
