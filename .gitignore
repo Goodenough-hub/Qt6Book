@@ -1,3 +1,4 @@
-# 忽略build目录
+﻿# 忽略build目录
 build/
 CMakeLists.txt.user
+*.TMP
