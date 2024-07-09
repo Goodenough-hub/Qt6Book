@@ -184,7 +184,7 @@ void MainWindow::on_listWidget_currentItemChanged(QListWidgetItem *current, QLis
 
 void MainWindow::on_chkBoxSorting_clicked(bool checked)
 {
-    ui->listWidget->setSortingEnabled(checked);
+    //ui->listWidget->setSortingEnabled(checked);
 }
 
 
