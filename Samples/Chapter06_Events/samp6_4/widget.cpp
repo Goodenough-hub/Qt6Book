@@ -47,7 +47,7 @@ void Widget::dragEnterEvent(QDragEnterEvent *event)
         QString filename = event->mimeData()->urls().at(0).fileName(); // 获取文件名
         QFileInfo fileInfo(filename);
         QString ext = fileInfo.suffix().toUpper(); // 获取文件后缀
-        if(ext == "JPG")
+        if(ext == "JPG" || ext == "PNG")
             event->acceptProposedAction(); // 接受拖动操作
         else
             event->ignore(); // 忽略事件
