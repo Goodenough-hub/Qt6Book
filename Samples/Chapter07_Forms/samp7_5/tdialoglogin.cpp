@@ -76,7 +76,7 @@ void TDialogLogin::mouseMoveEvent(QMouseEvent *event)
 {
     // 按下鼠标左键进行移动
     QPoint eventPos = event->globalPos();
-    if(m_moving && (event->button() & Qt::LeftButton) && (eventPos - m_lastPos).manhattanLength() > QApplication::startDragDistance())
+    if(m_moving && (event->buttons() & Qt::LeftButton) && (eventPos - m_lastPos - pos()).manhattanLength() > QApplication::startDragDistance())
     {
         move(eventPos - m_lastPos);
         m_lastPos = eventPos - this->pos();
