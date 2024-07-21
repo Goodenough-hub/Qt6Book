@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/Pic">
+        <file>images/132.bmp</file>
+        <file>images/212.bmp</file>
+        <file>images/214.bmp</file>
+        <file>images/322.bmp</file>
+        <file>images/324.bmp</file>
+        <file>images/500.bmp</file>
+        <file>images/502.bmp</file>
+        <file>images/504.bmp</file>
+        <file>images/508.bmp</file>
+        <file>images/510.bmp</file>
+        <file>images/512.bmp</file>
+        <file>images/514.bmp</file>
+        <file>images/516.bmp</file>
+        <file>images/718.bmp</file>
+        <file>images/724.bmp</file>
+        <file>images/728.bmp</file>
+        <file>images/saveall1.bmp</file>
+        <file>images/upfold1.bmp</file>
+    </qresource>
+</RCC>
