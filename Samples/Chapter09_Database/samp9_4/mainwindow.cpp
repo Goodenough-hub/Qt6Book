@@ -83,3 +83,49 @@ void MainWindow::on_actFields_triggered()
     QMessageBox::information(this, "所有字段名", str);
 }
 
+
+void MainWindow::on_actRecAppend_triggered()
+{
+    tabModel->insertRow(tabModel->rowCount());
+    selModel->clearSelection();
+    QModelIndex curIndex = tabModel->index(tabModel->rowCount() - 1, 1);
+    selModel->setCurrentIndex(curIndex, QItemSelectionModel::Select);
+}
+
+
+void MainWindow::on_actRecInsert_triggered()
+{
+    QModelIndex curIndex = ui->tableView->currentIndex();
+    tabModel->insertRow(curIndex.row());
+    selModel->clearSelection();
+    selModel->setCurrentIndex(curIndex, QItemSelectionModel::Select);
+}
+
+
+void MainWindow::on_actRecDelete_triggered()
+{
+    tabModel->removeRow(selModel->currentIndex().row());
+    tabModel->submitAll(); // 删除后直接提交
+}
+
+
+void MainWindow::on_actSubmit_triggered()
+{
+    bool res = tabModel->submitAll();
+    if(!res)
+        QMessageBox::information(this, "Error", "数据提交失败！\n" + tabModel->lastError().text());
+    else
+    {
+        ui->actSubmit->setEnabled(false);
+        ui->actRevert->setEnabled(false);
+    }
+}
+
+
+void MainWindow::on_actRevert_triggered()
+{
+    tabModel->revertAll();
+    ui->actSubmit->setEnabled(false);
+    ui->actRevert->setEnabled(false);
+}
+

@@ -30,6 +30,16 @@ private slots:
 
     void on_actFields_triggered();
 
+    void on_actRecAppend_triggered();
+
+    void on_actRecInsert_triggered();
+
+    void on_actRecDelete_triggered();
+
+    void on_actSubmit_triggered();
+
+    void on_actRevert_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
