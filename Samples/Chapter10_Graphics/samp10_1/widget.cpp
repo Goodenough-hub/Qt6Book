@@ -21,13 +21,14 @@ void Widget::paintEvent(QPaintEvent *event)
     QPainter painter(this); // 创建QPainter对象
     int W = this->width(); // 绘图区宽度
     int H = this->height(); // 绘图区高度
-    QRect rect(W/4, H/4, W/2, H/2); // 中间区域矩形
+
     painter.setPen(QPen(Qt::NoPen)); // 设置画笔，不显示线条
-    // 圆锥形渐变
-    QConicalGradient coniGrad(W/2, H/2, 45);
-    coniGrad.setColorAt(0, Qt::blue); // 起点颜色
-    coniGrad.setColorAt(0.8, Qt::white); // 终点颜色
-    painter.setBrush(coniGrad);
-    painter.drawRect(rect); // 绘制矩形
+    // 辐射渐变
+    QRadialGradient radialGrad(W/2, H/2, qMax(W/8, H/8), W/2, H/2);
+    radialGrad.setColorAt(0, Qt::yellow); // 起点颜色
+    radialGrad.setColorAt(0.1, Qt::white); // 终点颜色
+    radialGrad.setSpread(QGradient::PadSpread); // 延展方式还有RepeatSpread、ReflectSpread
+    painter.setBrush(radialGrad);
+    painter.drawRect(this->rect()); // 填充更大区域，会有延展效果
     event->accept();
 }
