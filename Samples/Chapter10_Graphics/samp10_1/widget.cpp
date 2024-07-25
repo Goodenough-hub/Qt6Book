@@ -20,7 +20,6 @@ void Widget::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this); // 创建QPainter对象
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.setRenderHint(QPainter::TextAntialiasing);
     int W = this->width(); // 绘图区宽度
     int H = this->height(); // 绘图区高度
     QRect rect(W/4, H/4, W/2, H/2); // 中间区域矩形
@@ -29,13 +28,14 @@ void Widget::paintEvent(QPaintEvent *event)
     pen.setWidth(3); // 线宽
     pen.setColor(Qt::red); // 线条颜色
     pen.setStyle(Qt::SolidLine); // 线条样式
-    pen.setCapStyle(Qt::RoundCap); // 线条端点样式
+    pen.setCapStyle(Qt::FlatCap); // 线条端点样式
     pen.setJoinStyle(Qt::BevelJoin); // 线条的连接样式
     painter.setPen(pen);
     // 设置画刷
+    QPixmap texturePixmap(":/Pics/images/texture.jpg");
     QBrush brush;
-    brush.setColor(Qt::yellow); // 画刷颜色
-    brush.setStyle(Qt::SolidPattern); // 画刷填充样式
+    brush.setStyle(Qt::TexturePattern); // 画刷填充样式
+    brush.setTexture(texturePixmap); // 设置材质图片
     painter.setBrush(brush);
     // 绘图
     painter.drawRect(rect); // 绘制矩形
