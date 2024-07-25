@@ -24,11 +24,10 @@ void Widget::paintEvent(QPaintEvent *event)
     QRect rect(W/4, H/4, W/2, H/2); // 中间区域矩形
     painter.setPen(QPen(Qt::NoPen)); // 设置画笔，不显示线条
     // 线性渐变
-    QLinearGradient linearGrad(rect.left(), rect.top(), rect.right(), rect.top()); // 从左到右
-    linearGrad.setColorAt(0, Qt::blue); // 起点颜色
-    linearGrad.setColorAt(0.5, Qt::white); // 中间点颜色
-    linearGrad.setColorAt(1, Qt::blue); // 终点颜色
-    painter.setBrush(linearGrad);
+    QRadialGradient radialGrad(W/2, H/2, qMax(W/3, H/3), W/2, H/2);
+    radialGrad.setColorAt(0, Qt::white); // 起点颜色
+    radialGrad.setColorAt(1, Qt::blue); // 终点颜色
+    painter.setBrush(radialGrad);
     painter.drawRect(rect); // 绘制矩形
     event->accept();
 }
