@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>491</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="TGraphicsView" name="view"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftToolBarArea</set>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actItem_Rect"/>
+   <addaction name="actItem_Ellipse"/>
+   <addaction name="actItem_Circle"/>
+   <addaction name="actItem_Triangle"/>
+   <addaction name="actItem_Polygon"/>
+   <addaction name="actItem_Line"/>
+   <addaction name="actItem_Text"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actZoomIn"/>
+   <addaction name="actZoomOut"/>
+   <addaction name="actRestore"/>
+   <addaction name="separator"/>
+   <addaction name="actRotateLeft"/>
+   <addaction name="actRotateRight"/>
+   <addaction name="actItem_Front"/>
+   <addaction name="actEdit_Back"/>
+   <addaction name="actGroup"/>
+   <addaction name="actGroupBreak"/>
+   <addaction name="separator"/>
+   <addaction name="actEdit_Delete"/>
+   <addaction name="separator"/>
+   <addaction name="actQuit"/>
+  </widget>
+  <action name="actItem_Rect">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/RECTANGL.BMP</normaloff>:/Pics/images/RECTANGL.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>矩形</string>
+   </property>
+   <property name="toolTip">
+    <string>添加矩阵</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actItem_Ellipse">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/ELLIPSE.BMP</normaloff>:/Pics/images/ELLIPSE.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>椭圆</string>
+   </property>
+   <property name="toolTip">
+    <string>添加椭圆</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actItem_Line">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/LINE.BMP</normaloff>:/Pics/images/LINE.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>直线</string>
+   </property>
+   <property name="toolTip">
+    <string>添加直线</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actEdit_Delete">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/108.bmp</normaloff>:/Pics/images/108.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+   <property name="toolTip">
+    <string>删除选中的图形</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/132.bmp</normaloff>:/Pics/images/132.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出本系统</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actItem_Text">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/800.bmp</normaloff>:/Pics/images/800.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>文字</string>
+   </property>
+   <property name="toolTip">
+    <string>添加文字</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actItem_Front">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/528.bmp</normaloff>:/Pics/images/528.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>前置</string>
+   </property>
+   <property name="toolTip">
+    <string>居于最前面</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actEdit_Back">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/526.bmp</normaloff>:/Pics/images/526.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>后置</string>
+   </property>
+   <property name="toolTip">
+    <string>居于最后面</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actItem_Polygon">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/FREEFORM.BMP</normaloff>:/Pics/images/FREEFORM.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>梯形</string>
+   </property>
+   <property name="toolTip">
+    <string>添加梯形</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actZoomIn">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/zoomin.png</normaloff>:/Pics/images/zoomin.png</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+   <property name="toolTip">
+    <string>放大</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actZoomOut">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/zoomout.png</normaloff>:/Pics/images/zoomout.png</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+   <property name="toolTip">
+    <string>缩小</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actRotateLeft">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/rotateleft.png</normaloff>:/Pics/images/rotateleft.png</iconset>
+   </property>
+   <property name="text">
+    <string>左旋转</string>
+   </property>
+   <property name="toolTip">
+    <string>左旋转</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actRotateRight">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/rotateright.png</normaloff>:/Pics/images/rotateright.png</iconset>
+   </property>
+   <property name="text">
+    <string>右旋转</string>
+   </property>
+   <property name="toolTip">
+    <string>右旋转</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actRestore">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/420.bmp</normaloff>:/Pics/images/420.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>恢复</string>
+   </property>
+   <property name="toolTip">
+    <string>恢复大小</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actGroup">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/UNGROUP.BMP</normaloff>:/Pics/images/UNGROUP.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>组合</string>
+   </property>
+   <property name="toolTip">
+    <string>组合</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actGroupBreak">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/128.bmp</normaloff>:/Pics/images/128.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>打散</string>
+   </property>
+   <property name="toolTip">
+    <string>取消组合</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actItem_Circle">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/08.JPG</normaloff>:/Pics/images/08.JPG</iconset>
+   </property>
+   <property name="text">
+    <string>圆形</string>
+   </property>
+   <property name="toolTip">
+    <string>圆形</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actItem_Triangle">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/Pics/images/Icon1242.ico</normaloff>:/Pics/images/Icon1242.ico</iconset>
+   </property>
+   <property name="text">
+    <string>三角形</string>
+   </property>
+   <property name="toolTip">
+    <string>三角形</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">F:\ming\project\git\Qt6Book\Samples\Chapter10_Graphics\samp10_5\tgraphicsview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
