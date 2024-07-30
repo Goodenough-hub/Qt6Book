@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/Pics">
+        <file>images/3.ico</file>
+        <file>images/017.GIF</file>
+        <file>images/39.ico</file>
+        <file>images/43.ico</file>
+        <file>images/132.bmp</file>
+        <file>images/216.GIF</file>
+        <file>images/280.GIF</file>
+        <file>images/281.GIF</file>
+        <file>images/828.bmp</file>
+        <file>images/chart.ico</file>
+        <file>images/dis.ico</file>
+        <file>images/dis3.ico</file>
+        <file>images/dis4.ico</file>
+        <file>images/f1.ico</file>
+        <file>images/f4.ico</file>
+        <file>images/f6.ico</file>
+        <file>images/f14.ico</file>
+        <file>images/f16.ico</file>
+        <file>images/f17.ico</file>
+    </qresource>
+</RCC>
