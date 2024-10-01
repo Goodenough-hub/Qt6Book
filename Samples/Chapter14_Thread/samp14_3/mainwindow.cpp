@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include <iostream>
 
 void MainWindow::closeEvent(QCloseEvent *event) // 确保在窗口关闭时线程被停止
 {
@@ -56,7 +55,6 @@ void MainWindow::do_newValue(int seq, int diceValue)
 
 void MainWindow::do_newPicture(QString picName)
 {// 与线程的 newPicture() 信号关联
-    std::cout << picName.toStdString().data() << std::endl;
     QPixmap pic(picName); // 加载图片
     ui->labPic->setPixmap(pic); // 显示骰子图片
 }
