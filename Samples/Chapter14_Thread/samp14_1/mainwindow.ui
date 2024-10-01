@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>498</width>
+    <height>353</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>多线程，使用信号与主线程通信</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>271</width>
+      <height>271</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labPic">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>60</y>
+      <width>161</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actThread_Run"/>
+   <addaction name="actDice_Run"/>
+   <addaction name="actDice_Pause"/>
+   <addaction name="actThread_Quit"/>
+   <addaction name="actClear"/>
+   <addaction name="actExit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actThread_Run">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/flag24.png</normaloff>:/icons/images/flag24.png</iconset>
+   </property>
+   <property name="text">
+    <string>启动线程</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actDice_Run">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/play24.png</normaloff>:/icons/images/play24.png</iconset>
+   </property>
+   <property name="text">
+    <string>开始</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actDice_Pause">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/pause24.png</normaloff>:/icons/images/pause24.png</iconset>
+   </property>
+   <property name="text">
+    <string>暂停</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actThread_Quit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/block24.png</normaloff>:/icons/images/block24.png</iconset>
+   </property>
+   <property name="text">
+    <string>结束线程</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actClear">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/212.bmp</normaloff>:/icons/images/212.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>清空</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actExit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icons/images/132.bmp</normaloff>:/icons/images/132.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>关闭</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>248</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
